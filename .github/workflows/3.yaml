@@ -1,0 +1,14 @@
+name: Hello Github Actions
+on: [push]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    env:                      # ← 在整个 job 设置环境变量
+      COURSE: CloudComputing
+    steps:
+      - name: say Hello
+        run: echo "Hello from Github Actions!"
+      - run: echo "Hello from ${COURSE}!"   # 使用环境变量
+      - run: echo "I'll list files."
+      - run: ls -al
