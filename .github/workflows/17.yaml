@@ -11,3 +11,4 @@ jobs:
       - run: echo "Hello from ${COURSE}!"
       - run: echo "I'll list files."
       - run: ls -al
+      - run: cat .github/workflows/17.yaml
