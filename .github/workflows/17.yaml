@@ -1,0 +1,13 @@
+name: Hello Github Actions
+on: [push]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    env:
+      COURSE: CloudComputing
+    steps:
+      - uses: actions/checkout@v4   # ← 加入 checkout
+      - run: echo "Hello from ${COURSE}!"
+      - run: echo "I'll list files."
+      - run: ls -al
